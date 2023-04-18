@@ -12,6 +12,12 @@
 #include <linux/videodev2.h>
 #include <libv4l2.h>
 #define CLEAR(x) memset(&(x), 0, sizeof(x))
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
 struct Control
 {
     char name[64];
@@ -35,6 +41,8 @@ struct buffer
     size_t length;
 };
 
+
+
 int64_t get_control_min(char *name);
 int64_t get_control_max(char *name);
 int64_t get_control_default(char *name);
@@ -46,3 +54,9 @@ void set_control_by_code(int code, int value);
 void print_control_list();
 void close_driver_access();
 void initialization(char *v4l2_device, int sensor_mode);
+
+#ifdef __cplusplus
+
+}
+#endif
+
