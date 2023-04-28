@@ -1,3 +1,7 @@
+# Dependecy 
+
+- libv4l-dev
+
 # Installation
 
  ```gcc -shared -o topaz_api.so -fPIC topaz_api.c ```
