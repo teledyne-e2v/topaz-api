@@ -3,12 +3,22 @@ The API also allows the sensor to be launched in different sensor_modes. For exa
 
 # Dependecy 
 
-- libv4l-dev
+libv4l-dev:
+
+	sudo apt install libv4l-dev
+
+
 
 # Installation
 
- ```gcc -shared -o topaz_api.so -fPIC topaz_api.c ```
+Compile:
 
- ```sudo mv topaz_api.so /usr/local/lib/```
+	gcc -shared -o topaz_api.so -fPIC topaz_api.c
 
- ```sudo cp topaz_api.h /usr/local/include/```
+move the compiled file:
+
+	sudo mv topaz_api.so /usr/local/lib/
+ 
+ copy the heqder file:
+
+	sudo cp topaz_api.h /usr/local/include/
