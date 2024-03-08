@@ -19,6 +19,6 @@ move the compiled file:
 
 	sudo mv topaz_api.so /usr/local/lib/
  
- copy the heqder file:
+ copy the header file:
 
 	sudo cp topaz_api.h /usr/local/include/
